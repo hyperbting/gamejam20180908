@@ -28,6 +28,11 @@ public class Countdowner : MonoBehaviour {
         isRunning = true;
     }
 
+    public void AddTime(int _millisecond)
+    {
+        currentNumber += _millisecond;
+    }
+
 
     // Update is called once per frame
     void Update () {
