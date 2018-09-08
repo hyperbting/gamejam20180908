@@ -5,6 +5,7 @@ using UnityEngine;
 public class Countdowner : MonoBehaviour {
 
     public bool isRunning = false;
+    public TextUpdater myInfoPresenter;
 
     [Header("Debug Info")]
     [SerializeField]
@@ -21,7 +22,7 @@ public class Countdowner : MonoBehaviour {
     private void Reset()
     {
 
-        currentNumber = 6 * 1000;
+        currentNumber = 60 * 1000;
         diffcultFactor = 1;
 
         isRunning = true;
@@ -43,5 +44,6 @@ public class Countdowner : MonoBehaviour {
 
 
         currentNumber -= (int)(Time.deltaTime * diffcultFactor * 1000);
+        myInfoPresenter.UpdateCountDown(currentNumber);
     }
 }
