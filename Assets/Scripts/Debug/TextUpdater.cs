@@ -20,12 +20,6 @@ public class TextUpdater : MonoBehaviour, IInfoUpdater
     btnEnlargeFactor = 1;
     AddSecondBtnRectT  = AddSecondBtn.GetComponent<RectTransform>();
 
-    AddSecondBtn.onClick.AddListener(() => {
-        myManager.AddMillisecond();
-        ShrinkBtn();
-
-    });
-
     }
 	
 	// Update is called once per frame
