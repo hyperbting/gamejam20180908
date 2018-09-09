@@ -9,15 +9,10 @@ public class EnemyBehavior : MonoBehaviour {
     [SerializeField]
     private EnemyStatus currentStatus;
 
-    public void Init()
-    {
-        currentStatus = new EnemyStatus();
-    }
-
-    public void Init(int _degree)
+    public void Init(int _degree = 0)
     {
         cPosition.rotationDegree = _degree;
-        Init();
+        currentStatus = new EnemyStatus();
     }
 
 
@@ -32,13 +27,6 @@ public class EnemyBehavior : MonoBehaviour {
 
         return currentStatus;
     }
-
-    public void Destroy()
-    {
-        Destroy(gameObject);
-
-    }
-
 }
 
 [System.Serializable]

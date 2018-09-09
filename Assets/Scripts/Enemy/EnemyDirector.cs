@@ -29,8 +29,7 @@ public class EnemyDirector : MonoBehaviour {
 
         ChangeMovementPattern(MovementPattern.Swing);
 
-        myManger.EndGameEvent += Stop;
-        isWorking = true;
+        Reset();
     }
 
     // Update is called once per frame
@@ -46,7 +45,7 @@ public class EnemyDirector : MonoBehaviour {
 
             if (eStatus.reachedOrigin)
             {
-                enmList[idx].Destroy();
+                Destroy(enmList[idx].gameObject);
                 enmList.RemoveAt(idx);
             }
                 
@@ -63,6 +62,12 @@ public class EnemyDirector : MonoBehaviour {
             storedTime -= reproductPerMillisecond;
         }
             
+    }
+
+    public void Reset()
+    {
+        myManger.EndGameEvent += Stop;
+        isWorking = true;
     }
 
     public void Stop()
