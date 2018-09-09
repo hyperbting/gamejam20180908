@@ -42,9 +42,9 @@ public class Countdowner : MonoBehaviour {
         if (!isRunning)
             return;
 
-        if(currentNumber <0)
+        if(currentNumber < 0)
         {
-            Debug.Log("End");
+            myManager.EndGameEvent();
             isRunning = false;
             return;
         }

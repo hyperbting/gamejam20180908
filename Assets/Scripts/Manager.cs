@@ -4,9 +4,17 @@ using UnityEngine;
 
 public partial class Manager : MonoBehaviour {
 
+    public delegate void voidDele();
+    public voidDele EndGameEvent;
+
     public Countdowner myCountdowner;
 
     public Coroutine OnlyOneCountdown;
+
+    private void OnEnable()
+    {
+        EndGameEvent += () => { Debug.Log("End"); };
+    }
 
     // Use this for initialization
     void Start () {

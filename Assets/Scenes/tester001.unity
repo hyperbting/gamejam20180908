@@ -202,9 +202,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33ec6a8bd5494e6d8e360390b673564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myManger: {fileID: 501968206}
   myEnemy01: {fileID: 386237241}
+  isWorking: 0
   reproductPerMillisecond: 1000
   storedTime: 0
+  currentPatternName: 0
   enmList: []
 --- !u!4 &258161077
 Transform:
