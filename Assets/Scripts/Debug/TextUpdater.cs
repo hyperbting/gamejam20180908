@@ -38,7 +38,7 @@ public class TextUpdater : MonoBehaviour, IInfoUpdater
 
         Rect oldRect = AddSecondBtnRectT.rect;
         oldRect.width -= btnShrinkFactor;
-        // TODO: make sure range
+        // TODO: make sure range constraint
 
         AddSecondBtnRectT.sizeDelta = new Vector2(oldRect.width, oldRect.height);
     }
@@ -47,7 +47,7 @@ public class TextUpdater : MonoBehaviour, IInfoUpdater
     {
         Rect oldRect = AddSecondBtnRectT.rect;
         oldRect.width += btnEnlargeFactor;
-        // TODO: make sure range
+        // TODO: make sure range constraint
 
         AddSecondBtnRectT.sizeDelta = new Vector2(oldRect.width, oldRect.height);
     }

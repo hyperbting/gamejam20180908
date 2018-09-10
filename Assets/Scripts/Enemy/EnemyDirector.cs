@@ -48,11 +48,8 @@ public class EnemyDirector : MonoBehaviour {
                 Destroy(enmList[idx].gameObject);
                 enmList.RemoveAt(idx);
             }
-                
-
         }
     }
-
 
     private void LateUpdate()
     {

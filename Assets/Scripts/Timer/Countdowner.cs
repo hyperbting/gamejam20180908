@@ -49,7 +49,6 @@ public class Countdowner : MonoBehaviour {
             return;
         }
 
-
         currentNumber -= (int)(Time.deltaTime * diffcultFactor * 1000);
         myManager.myTextUpdater.UpdateCountDown(currentNumber);
     }
